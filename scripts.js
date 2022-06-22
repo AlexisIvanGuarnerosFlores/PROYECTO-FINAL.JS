@@ -4,9 +4,84 @@ let inputContraseña=prompt("ingresa tu contraseña")
 
 
 const cuentas=[
-    {nombre:"mali", saldo:"200", contraseña: "1515"},
-    {nombre:"gera", saldo:"290", contraseña: "1218"},
-    {nombre:"maui", saldo:"67", contraseña: "1234"}]
+    {nombre:"mali",  contraseña: "1515", saldo:"200"},
+    {nombre:"gera",  contraseña: "1218", saldo:"290"},
+    {nombre:"maui", contraseña: "1234", saldo:"67"}
+]
+
+
+
+    // if (inputUsuario== cuentas[0].nombre && inputContraseña== cuentas[0].contraseña){
+    //     alert("!!!")  
+    // }
+    // else {
+    //     alert("usuario invalido")
+    // }
+ validarUsuario= (a,b)=>{
+    if(a==b){alert(`Bienvenido, ${inputUsuario}` )}
+    else(alert("Usuario invalido"))
+}
+
+
+
+validarContraseña= (a,b)=>{
+    if(a==b){alert("correct")}
+    else(alert("sorry")) }
+    
+    
+    // validarUsuario(inputUsuario,cuentas.forEach.nombre)
+    // validarUsuario(inputContraseña,cuentas.forEach.contraseña)
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // *****FUNCIONES DE SUMA Y RESTA********
+// let saldo= 0
+// let ingresar= parseInt( prompt("ingresa el monto a añadir"))
+// let retirar= parseInt( prompt("ingresa el monto a retirar"))
+
+// // *****SUMA*****
+// suma= (añadir)=>{
+// return saldo += añadir;}
+
+
+// // *******RESTA******
+// resta =(restar)=>{
+//     return saldo -=restar;
+// }
+
+// totalSuma= suma(ingresar)
+// totalResta=resta(retirar)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35,4 +110,3 @@ const cuentas=[
 // {
 // console.log(input.value)
 // })
-

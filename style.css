@@ -1,5 +1,36 @@
 body{background-color: rgb(104, 8, 207);}
 
-.contain{width: 60rem;
+.contain{width: 70rem;
+        height: 50rem;
+    background-color: rgb(209, 208, 208);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 10% 80% 10%;
+    padding:0% }
+
+.contain__pantalla{display: flex;
+    align-items: center;
+    justify-content: center;}
+
+.pantalla{background-color: aqua;
+        width: 80rem;
         height: 40rem;
-    background-color: gray;}
+        }
+        
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+}
+
+.button__styles{
+    width: 6rem;
+    height: 4rem;
+    cursor: pointer;
+}
