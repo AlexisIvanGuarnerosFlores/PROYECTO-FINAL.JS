@@ -1,5 +1,8 @@
+
+
+
 let inputUsuario=prompt("ingrese su nombre de Usuario")
-let inputContraseña=prompt("ingresa tu contraseña")
+// // let inputContraseña=prompt("ingresa tu contraseña")
 
 
 
@@ -17,20 +20,34 @@ const cuentas=[
     // else {
     //     alert("usuario invalido")
     // }
- validarUsuario= (a,b)=>{
-    if(a==b){alert(`Bienvenido, ${inputUsuario}` )}
-    else(alert("Usuario invalido"))
+
+
+// console.log(mapeo__nombres) 
+
+//  validarUsuario= (nombre,ma)=>{
+//     if(a==b){alert(`Bienvenido, ${inputUsuario}` )}
+//     else(alert("Usuario invalido"))
+// }
+// let mapeo__nombres= cuentas.map(cuenta=>cuenta.nombre)
+
+// validarUsuario(inputUsuario,cuentas[0].nombre)
+
+let buscarUsuario=(nombre,listaUsuarios)=>{
+for (let i=0; i<=listaUsuarios.length; i+1){
+    if(nombre==listaUsuarios[i].nombre){
+        return listaUsuarios[i]
+    }
 }
 
-
-
-validarContraseña= (a,b)=>{
-    if(a==b){alert("correct")}
-    else(alert("sorry")) }
+}
+console.log(buscarUsuario(inputUsuario,cuentas))
+// validarContraseña= (a,b)=>{
+//     if(a==b){alert("correct")}
+//     else(alert("sorry")) }
     
     
-    // validarUsuario(inputUsuario,cuentas.forEach.nombre)
-    // validarUsuario(inputContraseña,cuentas.forEach.contraseña)
+    // validarUsuario()
+    // validarUsuario()
 
 
 
@@ -44,8 +61,8 @@ validarContraseña= (a,b)=>{
 
 
 
-// // *****FUNCIONES DE SUMA Y RESTA********
-// let saldo= 0
+// // // *****FUNCIONES DE SUMA Y RESTA********
+
 // let ingresar= parseInt( prompt("ingresa el monto a añadir"))
 // let retirar= parseInt( prompt("ingresa el monto a retirar"))
 
