@@ -1,15 +1,14 @@
 
-
-
 let inputUsuario=prompt("ingrese su nombre de Usuario")
-// // let inputContraseña=prompt("ingresa tu contraseña")
+let inputContrasena=prompt("ingrese su contraseña de Usuario")
+
 
 
 
 const cuentas=[
-    {nombre:"mali",  contraseña: "1515", saldo:"200"},
-    {nombre:"gera",  contraseña: "1218", saldo:"290"},
-    {nombre:"maui", contraseña: "1234", saldo:"67"}
+    {nombre:"mali",  contrasena: "1515", saldo:200},
+    {nombre:"gera",  contrasena: "1218", saldo:290},
+    {nombre:"maui", contrasena: "1234", saldo:67}
 ]
 
 
@@ -32,15 +31,30 @@ const cuentas=[
 
 // validarUsuario(inputUsuario,cuentas[0].nombre)
 
-let buscarUsuario=(nombre,listaUsuarios)=>{
-for (let i=0; i<=listaUsuarios.length; i+1){
-    if(nombre==listaUsuarios[i].nombre){
+let buscarUsuario=(nombre,contrasenaUsuario,listaUsuarios)=>{
+for (let i=0; i<=listaUsuarios.length; i++){
+    if(nombre==listaUsuarios[i].nombre && contrasenaUsuario== listaUsuarios[i].contrasena){
+          
         return listaUsuarios[i]
     }
 }
 
 }
-console.log(buscarUsuario(inputUsuario,cuentas))
+let usuarioActivo= buscarUsuario(inputUsuario, inputContrasena,cuentas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // validarContraseña= (a,b)=>{
 //     if(a==b){alert("correct")}
 //     else(alert("sorry")) }
@@ -63,20 +77,23 @@ console.log(buscarUsuario(inputUsuario,cuentas))
 
 // // // *****FUNCIONES DE SUMA Y RESTA********
 
-// let ingresar= parseInt( prompt("ingresa el monto a añadir"))
+let ingresar= parseInt(prompt("ingresa el monto a añadir"))
 // let retirar= parseInt( prompt("ingresa el monto a retirar"))
 
-// // *****SUMA*****
-// suma= (añadir)=>{
-// return saldo += añadir;}
+// *****SUMA*****
+let suma= (cuenta,añadir)=>{
+let cuentaModificada= cuenta
+cuentaModificada.saldo= cuenta.saldo + añadir
+return cuentaModificada
+}
+console.log(suma(usuarioActivo,ingresar))
 
+// *******RESTA******
+let resta =(restar)=>{
+    return saldo -=restar;
+}
 
-// // *******RESTA******
-// resta =(restar)=>{
-//     return saldo -=restar;
-// }
-
-// totalSuma= suma(ingresar)
+totalSuma= suma(ingresar)
 // totalResta=resta(retirar)
 
 
