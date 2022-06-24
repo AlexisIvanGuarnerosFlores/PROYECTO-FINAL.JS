@@ -1,36 +1,167 @@
-body{background-color: rgb(104, 8, 207);}
+ /* --fuente1: 'Kdam Thmor Pro', sans-serif;
+    --fuente2: 'Koulen', cursive;
+    --fuente3: 'Pacifico', cursive; */
 
-.contain{width: 70rem;
-        height: 50rem;
-    background-color: rgb(209, 208, 208);
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 10% 80% 10%;
-    padding:0% }
 
-.contain__pantalla{display: flex;
-    align-items: center;
-    justify-content: center;}
+ body {
+     background-color: rgb(104, 8, 207);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
 
-.pantalla{background-color: aqua;
-        width: 80rem;
-        height: 40rem;
-        }
-        
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-    width: 100%;
-    margin: 0;
-    padding: 0%;
-}
+ h1 {
+     font-family: 'Pacifico', cursive;
+     color: rgb(242, 255, 3);
+ }
 
-.button__styles{
-    width: 6rem;
-    height: 4rem;
-    cursor: pointer;
-}
+ .contain {
+     width: 90rem;
+     height: 50rem;
+     background-color: rgb(209, 208, 208);
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     grid-template-columns: 10% 80% 10%;
+     padding: 0%;
+
+     -webkit-box-shadow: inset 0px 12px 14px 3px rgba(15, 15, 15, 1);
+     -moz-box-shadow: inset 0px 12px 14px 3px rgba(15, 15, 15, 1);
+     box-shadow: inset 0px 12px 14px 3px rgba(15, 15, 15, 1);
+ }
+
+ .contain__pantalla {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+
+
+
+
+ }
+
+ .pantalla {
+     background-color: rgb(68, 88, 88);
+     width: 80rem;
+     height: 40rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     font-size: xx-large;
+     text-transform: uppercase;
+
+
+     -webkit-box-shadow: inset 0px 5px 5px 4px rgba(15, 15, 15, 1);
+     -moz-box-shadow: inset 0px 5px 5px 4px rgba(15, 15, 15, 1);
+     box-shadow: inset 0px 5px 5px 4px rgba(15, 15, 15, 1)
+ }
+
+ .pantalla h2 {
+     color: rgb(89, 255, 0);
+     font-family: 'Kdam Thmor Pro', sans-serif;
+ }
+
+ .pantalla h3 {
+     color: rgb(255, 255, 255);
+     font-family: 'Koulen', cursive;
+ }
+
+
+
+ .buttons {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 10rem;
+     width: 100%;
+     margin: 0;
+     padding: 0%;
+
+ }
+
+ /* .button__styles {
+     width: 6rem;
+     height: 4rem;
+     cursor: pointer;
+     font-family: 'Koulen', cursive;
+ } */
+
+ button {
+
+     --glow-color: rgb(217, 176, 255);
+     --glow-spread-color: rgba(191, 123, 255, 0.781);
+     --enhanced-glow-color: rgb(124, 13, 227);
+     --btn-color: rgb(100, 61, 136);
+     border: .25em solid var(--glow-color);
+
+     color: var(--glow-color);
+     font-family: 'Koulen', cursive;
+     font-size: 15px;
+     font-weight: bold;
+     background-color: var(--btn-color);
+     border-radius: 1em;
+     outline: none;
+     box-shadow: 0 0 .25em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+     text-shadow: 0 0 .5em var(--glow-color);
+     /* position: relative; */
+     transition: all 0.3s;
+     width: 6rem;
+     height: 4rem;
+     cursor: pointer;
+
+ }
+
+ button::after {
+     pointer-events: none;
+     content: "";
+     position: absolute;
+     top: 120%;
+     left: 0;
+     width: 6rem;
+     height: 4rem;
+     background-color: var(--glow-spread-color);
+     filter: blur(2em);
+     opacity: .7;
+     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+     cursor: pointer;
+ }
+
+ button:hover {
+     color: var(--btn-color);
+     background-color: var(--glow-color);
+     box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+
+ button:active {
+     box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
+
+ img {
+     width: 20rem;
+ }
+
+ .hecho {
+     font-family: 'Pacifico', cursive;
+     ;
+     color: rgb(255, 230, 0);
+     margin-top: 3rem;
+     padding: 0%;
+ }
+
+ .nombres {
+     font-family: 'Koulen', cursive;
+     font-size: 30px;
+     color: white;
+     margin: 0%;
+     padding: 0%;
+ }
