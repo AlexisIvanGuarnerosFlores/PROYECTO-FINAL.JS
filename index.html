@@ -5,30 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Koulen&family=Pacifico&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <title>ATM</title>
 </head>
 
 <body>
-    <h1>CAJERO ATM BANCO DEV.F</h1>
+    <h1>CAJERO ATM BANCO <img src="images/logo-devf.png" alt=""></h1>
 
 
     <div class="contain">
         <div class="buttons">
-            <button class="button__styles"></button>
-            <button class="button__styles"></button>
-            <button class="button__styles"></button>
+            <button class="button__styles" id="sumar" onclick="suma()">ingresar</button>
+            <button class="button__styles" id="restar" onclick="resta()">retirar</button>
+            <button class="button__styles" id="total" onclick="consultarSaldo()">consultar saldo</button>
 
         </div>
         <div class="contain__pantalla">
-            <div class="pantalla"></div>
+            <div class="pantalla" id="mostrardato">
+
+            </div>
         </div>
-       
+
         <div class="buttons">
-        <button class="button__styles"></button>
-        <button class="button__styles"></button>
-        <button class="button__styles"></button>
+            <button class="button__styles" id="sumar" onclick="suma()">ingresar</button>
+            <button class="button__styles" id="restar" onclick="resta()">retirar</button>
+            <button class="button__styles" id="total" onclick="consultarSaldo()">consultar saldo</button>
         </div>
+    </div>
+
+
+    <div>
+        <p class="hecho">Hecho por:</p>
+        <p class="nombres">Alexis Ivan Guarneros Flores</p>
+        <p class="nombres">Nancy Cristal Montoya Shimizu</p>
     </div>
     <script src="scripts.js"></script>
 </body>

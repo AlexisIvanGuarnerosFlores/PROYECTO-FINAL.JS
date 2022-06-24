@@ -1,100 +1,105 @@
 
-let inputUsuario=prompt("ingrese su nombre de Usuario")
-let inputContrasena=prompt("ingrese su contraseña de Usuario")
+
+let inputUsuario = prompt("ingrese su nombre de Usuario")
+let inputContrasena = prompt("ingrese su contraseña de Usuario")
 
 
 
 
-const cuentas=[
-    {nombre:"mali",  contrasena: "1515", saldo:200},
-    {nombre:"gera",  contrasena: "1218", saldo:290},
-    {nombre:"maui", contrasena: "1234", saldo:67}
+
+let pantalla = document.getElementById("mostrardato")
+
+
+
+const cuentas = [
+    { nombre: "mali", contrasena: "1515", saldo: 200 },
+    { nombre: "gera", contrasena: "1218", saldo: 290 },
+    { nombre: "maui", contrasena: "1234", saldo: 67 }
 ]
 
 
 
-    // if (inputUsuario== cuentas[0].nombre && inputContraseña== cuentas[0].contraseña){
-    //     alert("!!!")  
-    // }
-    // else {
-    //     alert("usuario invalido")
-    // }
 
 
-// console.log(mapeo__nombres) 
 
-//  validarUsuario= (nombre,ma)=>{
-//     if(a==b){alert(`Bienvenido, ${inputUsuario}` )}
-//     else(alert("Usuario invalido"))
-// }
-// let mapeo__nombres= cuentas.map(cuenta=>cuenta.nombre)
+let buscarUsuario = (nombre, contrasenaUsuario, listaUsuarios) => {
+    
+    
+    for (let i = 0; i <= listaUsuarios.length; i++) {
+        if (nombre == listaUsuarios[i].nombre && contrasenaUsuario == listaUsuarios[i].contrasena) {
+            alert(" TERMINOS Y CONDICIONES\n\n 1°TU CUENTA NO DEBE DE TENER MAS $990 \n 2°TU CUENTA NO DEBE DE TENER MENOS DE $10")
+            return listaUsuarios[i]
+            
+        }
 
-// validarUsuario(inputUsuario,cuentas[0].nombre)
+         else if(nombre != listaUsuarios[i].nombre || contrasenaUsuario != listaUsuarios[i].contrasena) { 
+           
+} pantalla.innerHTML = `<h2>ERROR, FAVOR DE REFRESCAR LA PAGINA E INTENTE DE NUEVO</h2>`
 
-let buscarUsuario=(nombre,contrasenaUsuario,listaUsuarios)=>{
-for (let i=0; i<=listaUsuarios.length; i++){
-    if(nombre==listaUsuarios[i].nombre && contrasenaUsuario== listaUsuarios[i].contrasena){
-          
-        return listaUsuarios[i]
     }
-}
 
 }
-let usuarioActivo= buscarUsuario(inputUsuario, inputContrasena,cuentas)
+
+
+let usuarioActivo = buscarUsuario(inputUsuario, inputContrasena, cuentas)
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (inputUsuario != "" && inputContrasena != "") {
+        consultarSaldo()
+    }
+
+})
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// validarContraseña= (a,b)=>{
-//     if(a==b){alert("correct")}
-//     else(alert("sorry")) }
+let consultarSaldo = () => {
     
-    
-    // validarUsuario()
-    // validarUsuario()
-
-
-
-
-
-
-
-
-
-
+    pantalla.innerHTML = `<h2>Bienvenido ${usuarioActivo.nombre} </h2>
+                        <h3>Tu saldo es de: $${usuarioActivo.saldo} </h3>`
+}
 
 
 
 // // // *****FUNCIONES DE SUMA Y RESTA********
 
-let ingresar= parseInt(prompt("ingresa el monto a añadir"))
-// let retirar= parseInt( prompt("ingresa el monto a retirar"))
 
 // *****SUMA*****
-let suma= (cuenta,añadir)=>{
-let cuentaModificada= cuenta
-cuentaModificada.saldo= cuenta.saldo + añadir
-return cuentaModificada
+let suma = () => {
+    let ingresar = parseInt(prompt("ingresa el monto a añadir"))
+
+    let saldoSuma = usuarioActivo.saldo + ingresar
+
+    if (saldoSuma < 10 || saldoSuma > 990) { alert("Tu operacion no puede ser realizada (*TyC*)") }
+    else {
+        usuarioActivo.saldo = usuarioActivo.saldo + ingresar
+        pantalla.innerHTML = `<h2 class="Bienvenido__pantalla">Bienvenido ${usuarioActivo.nombre} </h2>
+    <h3>Tu saldo es de: $${usuarioActivo.saldo} </h3>`
+    }
 }
-console.log(suma(usuarioActivo,ingresar))
+
+
+
 
 // *******RESTA******
-let resta =(restar)=>{
-    return saldo -=restar;
+
+let resta = () => {
+
+    let retirar = parseInt(prompt("ingresa el monto a retirar"))
+
+    let saldoResta = usuarioActivo.saldo - retirar
+    if (saldoResta < 10 || saldoResta > 990) { alert("Tu operacion no puede ser realizada (*TyC*)") }
+    else {
+        usuarioActivo.saldo = usuarioActivo.saldo - retirar
+        pantalla.innerHTML = `<h2 class="Bienvenido__pantalla">Bienvenido ${usuarioActivo.nombre} </h2>
+    <h3>Tu saldo es de: ${usuarioActivo.saldo} </h3>`
+    }
+
+
+
+
+
 }
 
-totalSuma= suma(ingresar)
-// totalResta=resta(retirar)
 
 
 
@@ -122,12 +127,11 @@ totalSuma= suma(ingresar)
 
 
 
-// if(inputUsuario==="mali"|| inputUsuario==="gera"||inputUsuario=== "maui"){
-    //     document.write(`Bienvenido ${inputUsuario}`)}
 
-    // else  
-    // {alert("ingrese un usuario valido")} 
-    
+
+
+
+
 
 
 
